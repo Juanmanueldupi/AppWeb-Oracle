@@ -1,0 +1,23 @@
+<body>
+    <h1>Contenido de la tabla {{ table_name }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <!-- Aquí puedes generar las cabeceras de las columnas -->
+                {% for column_name in table_data[0] %}
+                <th>{{ column_name[0] }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí puedes iterar sobre los datos y mostrarlos en filas y columnas -->
+            {% for row in table_data %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>

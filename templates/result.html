@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas Disponibles</title>
+</head>
+<body>
+    <h1>Has conseguido entrar en la base de datos de Oracle</h1>
+    <h1>A continuación tienes las tablas disponibles en esta base de datos:</h1>
+    <h2>Pincha en la tabla que quieras ver</h2>
+    <ul>
+        {% for table_name in data %}
+        <li><a href="{{ url_for('table_content', table_name=table_name[0])}}">{{ table_name[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
