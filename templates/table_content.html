@@ -3,7 +3,8 @@
     <table>
         <thead>
             <tr>
-                <!-- Aquí puedes generar las cabeceras de las columnas -->
+                
+                <!-- Aquí puedes generar las cabeceras de las columnas, comprobar table_data[0], porque eso me muestra la inicial del nombre del primer dato de la tabla, seguramente hay que modificar el valor table data por algun valor q haga referencia a la columna.)  -->
                 {% for column_name in table_data[0] %}
                 <th>{{ column_name[0] }}</th>
                 {% endfor %}
